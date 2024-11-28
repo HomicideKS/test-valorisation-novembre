@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-200;
+  }
+
+  .input {
+    @apply bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-400 dark:focus:border-primary-400 dark:text-white transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 rounded-lg shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  .stat-card {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 p-4 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-200;
+  }
+
+  .highlight-card {
+    @apply bg-primary-500/10 dark:bg-primary-500/20 border-primary-500/20 dark:border-primary-500/30;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-accent-purple animate-gradient;
+  }
+}
+
+/* Améliorations pour le mode sombre */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .chart-container {
+  @apply bg-gray-800 rounded-lg p-4 border border-gray-700;
+}
+
+.dark .chart-title {
+  @apply text-white font-semibold mb-4;
+}
+
+/* Transitions fluides */
+* {
+  transition: background-color 0.2s ease-in-out, 
+              border-color 0.2s ease-in-out, 
+              color 0.2s ease-in-out,
+              transform 0.2s ease-in-out,
+              box-shadow 0.2s ease-in-out;
+}
+
+/* Styles spécifiques pour les valeurs */
+.value-positive {
+  @apply text-green-500 dark:text-green-400 font-semibold;
+}
+
+.value-negative {
+  @apply text-red-500 dark:text-red-400 font-semibold;
+}
+
+/* Styles pour les graphiques */
+.chart-grid {
+  @apply stroke-gray-200 dark:stroke-gray-700;
+}
+
+.chart-text {
+  @apply fill-gray-600 dark:fill-gray-400;
+}
+
+/* Animations de hover améliorées */
+.hover-lift {
+  @apply transform transition-transform duration-200 hover:-translate-y-0.5;
+}
+
+/* Styles pour les badges et étiquettes */
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200;
+}
+
+.badge-success {
+  @apply bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200;
+}
+
+.badge-danger {
+  @apply bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200;
+}

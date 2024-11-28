@@ -1,0 +1,1 @@
+{/* Previous MetricCard.tsx content */}

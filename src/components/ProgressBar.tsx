@@ -1,0 +1,1 @@
+{/* Previous ProgressBar.tsx content */}
